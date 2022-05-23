@@ -9,4 +9,6 @@ depois verifique seus dispositivos de rede com
 
 *nmcli connection device*
 
-e depis execute o script
+e depois execute o script 
+
+*chmod +x config_server.sh && sudo ./config_server.sh
