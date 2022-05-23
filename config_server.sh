@@ -40,6 +40,7 @@ nmcli c add con-name $INAME type ethernet ifname $IDEVICE ipv4.method manual ipv
 
 echo "confiurando firewalld"
 sudo firewall-cmd --set-default-zone=internal
+sudo firewall-cmd --add-service=dhcp --permanent
 sudo firewall-cmd --reload
 
 echo "definindo o Hostname"
@@ -73,3 +74,11 @@ subnet 200.0.113.0 netmask 255.255.255.0 {
 # }
 
 EOF
+
+sudo systemctl enable dhcpd
+sudo systemctl start dhcpd
+sudo systemctl status dhcpd
+
+echo "terminou"
+
+
