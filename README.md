@@ -7,7 +7,7 @@ instale o git com comando
 
 depois verifique seus dispositivos de rede com 
 
-*nmcli connection device*
+*nmcli device s*
 
 e depois execute o script 
 
